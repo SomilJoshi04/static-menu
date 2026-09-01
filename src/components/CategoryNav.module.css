@@ -42,6 +42,8 @@
   font-size: 0.72rem;
   font-weight: 500;
   color: rgba(212, 175, 55, 0.6);
+  line-height: 1.35;
+  padding-top: 2px;
 }
 
 /* Circular Grid / Horizontal Scroll */

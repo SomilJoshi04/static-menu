@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 import menuData from "./data/menuData";
 import Header from "./components/Header";
 import HeroBanner from "./components/HeroBanner";
@@ -80,7 +81,9 @@ function App() {
           ))
         ) : (
           <div style={{ textAlign: "center", padding: "4rem 1.5rem", color: "rgba(255,247,230,0.6)" }}>
-            <p style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>🍽️</p>
+            <p style={{ fontSize: "2.2rem", marginBottom: "0.6rem", color: "#D4AF37" }}>
+              <FaMagnifyingGlass />
+            </p>
             <p style={{ fontSize: "1.1rem", fontWeight: "600", color: "#F2C94C" }}>
               No dishes found for "{searchQuery}"
             </p>

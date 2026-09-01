@@ -29,7 +29,21 @@
   margin-bottom: 1.5rem;
 }
 
-.logoIcon { font-size: 1.8rem; opacity: 0.8; }
+.logoBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(90, 15, 24, 0.6));
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #F2C94C;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.logoIcon { font-size: 1.3rem; }
 
 .name {
   font-family: 'Noto Serif Devanagari','Noto Sans Devanagari',serif;

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
+import CategoryIcon from "./CategoryIcon";
 import styles from "./CategoryNav.module.css";
 
 const ALL_CATEGORY = {
   id: "all",
   category: "All",
-  icon: "🍽️",
-  image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop&q=80",
+  image: "/images/special-nashta/cover.jpg",
 };
 
 const CategoryNav = ({ categories }) => {
@@ -80,7 +80,6 @@ const CategoryNav = ({ categories }) => {
       let targetElement = null;
 
       if (id === "all") {
-        // When "All" is clicked, scroll smoothly to the start of menu sections
         targetElement = document.getElementById(categories[0]?.id) || document.getElementById("main-content");
       } else {
         targetElement = document.getElementById(id);
@@ -151,7 +150,7 @@ const CategoryNav = ({ categories }) => {
                     loading="lazy"
                   />
                   <div className={styles.circleFallback} style={{ display: "none" }}>
-                    <span>{cat.icon}</span>
+                    <CategoryIcon categoryId={cat.id} className={styles.iconElement} />
                   </div>
                   {isActive && <div className={styles.activeGlow} aria-hidden="true" />}
                 </div>

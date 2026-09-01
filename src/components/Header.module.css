@@ -52,11 +52,10 @@
   font-weight: 700;
   color: #F2C94C;
   margin: 0;
-  line-height: 1.25;
+  line-height: 1.5;
   letter-spacing: -0.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding-top: 4px;
+  padding-bottom: 2px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 

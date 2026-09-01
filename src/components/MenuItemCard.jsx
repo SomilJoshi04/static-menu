@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaUtensils } from "react-icons/fa6";
 import styles from "./MenuItemCard.module.css";
 
 const MenuItemCard = ({ item, categoryImage, isPizza, onSelect }) => {
@@ -47,7 +48,7 @@ const MenuItemCard = ({ item, categoryImage, isPizza, onSelect }) => {
           />
         ) : (
           <div className={styles.imgFallback} aria-hidden="true">
-            <span className={styles.fallbackEmoji}>🍽️</span>
+            <FaUtensils size={32} color="#D4AF37" opacity={0.6} />
           </div>
         )}
       </div>

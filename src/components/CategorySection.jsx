@@ -22,7 +22,6 @@ const CategorySection = ({ category, onSelectItem }) => {
         </div>
 
         <div className={styles.titleRow}>
-          <span className={styles.icon} aria-hidden="true">{category.icon}</span>
           <div className={styles.titleGroup}>
             <h2 className={styles.title} id={`heading-${category.id}`}>
               {category.category}

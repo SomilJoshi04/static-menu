@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 import bannerData from "../data/bannerData";
 import styles from "./HeroBanner.module.css";
 
@@ -86,7 +87,7 @@ const HeroBanner = () => {
             <p className={styles.subtitle}>{currentBanner.subtitle}</p>
             <div className={styles.exploreTag}>
               <span>Explore Items</span>
-              <span className={styles.arrowIcon}>→</span>
+              <FaArrowRight className={styles.arrowIcon} size={12} />
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaUtensils, FaClock, FaHeart } from "react-icons/fa6";
 import styles from "./Footer.module.css";
 
 const Footer = () => (
@@ -10,7 +11,9 @@ const Footer = () => (
     </div>
 
     <div className={styles.nameBlock}>
-      <span className={styles.logoIcon} aria-hidden="true">🍽️</span>
+      <div className={styles.logoBadge} aria-hidden="true">
+        <FaUtensils className={styles.logoIcon} />
+      </div>
       <p className={styles.name} lang="hi">
         प्रहलाद भेल, पकौड़ी,
         <br />
@@ -19,7 +22,7 @@ const Footer = () => (
     </div>
 
     <div className={styles.notice} role="note">
-      <span className={styles.noticeIcon} aria-hidden="true">⏱️</span>
+      <FaClock className={styles.noticeIcon} size={16} aria-hidden="true" />
       <p className={styles.noticeText} lang="hi">
         ऑर्डर के बाद 15 मिनिट का समय लगेगा
       </p>
@@ -32,7 +35,9 @@ const Footer = () => (
     </div>
 
     <p className={styles.tagline}>Fresh Food &nbsp;•&nbsp; Great Taste &nbsp;•&nbsp; Happy Moments</p>
-    <p className={styles.thankyou}>Thank you for visiting us! 🙏</p>
+    <p className={styles.thankyou}>
+      Thank you for visiting us! <FaHeart color="#F2C94C" size={11} style={{ verticalAlign: "middle" }} />
+    </p>
   </footer>
 );
 

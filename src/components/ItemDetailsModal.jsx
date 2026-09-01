@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { FaXmark, FaUtensils } from "react-icons/fa6";
+import CategoryIcon from "./CategoryIcon";
 import styles from "./ItemDetailsModal.module.css";
 
 const ItemDetailsModal = ({ item, category, onClose }) => {
@@ -62,7 +64,7 @@ const ItemDetailsModal = ({ item, category, onClose }) => {
           onClick={onClose}
           aria-label="Close details"
         >
-          ✕
+          <FaXmark size={15} />
         </button>
 
         {/* Food Image */}
@@ -76,7 +78,11 @@ const ItemDetailsModal = ({ item, category, onClose }) => {
             />
           ) : (
             <div className={styles.imgFallback} aria-hidden="true">
-              <span className={styles.fallbackEmoji}>{category?.icon || "🍽️"}</span>
+              {category?.id ? (
+                <CategoryIcon categoryId={category.id} className={styles.fallbackIcon} />
+              ) : (
+                <FaUtensils size={44} color="#D4AF37" opacity={0.6} />
+              )}
             </div>
           )}
           <div className={styles.imgGradient} aria-hidden="true" />
@@ -87,7 +93,8 @@ const ItemDetailsModal = ({ item, category, onClose }) => {
           {/* Category Badge */}
           {category && (
             <span className={styles.catBadge}>
-              {category.icon} {category.category}
+              <CategoryIcon categoryId={category.id} />
+              <span>{category.category}</span>
             </span>
           )}
 

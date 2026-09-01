@@ -30,17 +30,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
   margin: 0.35rem 0;
 }
-
-.icon { font-size: 2rem; line-height: 1; filter: drop-shadow(0 0 8px rgba(212,175,55,0.3)); }
 
 .titleGroup {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.12rem;
+  align-items: center;
+  text-align: center;
+  gap: 0.15rem;
 }
 
 .title {
@@ -59,7 +57,8 @@
   font-size: 0.8rem;
   color: rgba(212,175,55,0.55);
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.35;
+  padding-top: 2px;
 }
 
 /* Items Grid — 4 cols desktop, 3 tablet, 2 mobile */

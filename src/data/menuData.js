@@ -8,7 +8,7 @@ const menuData = [
     id: "south-indian",
     category: "South Indian",
     categoryHindi: "साउथ इंडियन",
-    image: U("1567620905732-2d1ec7ab7445"),
+    image: "/images/south-indian/cover.jpg",
     icon: "🥙",
     items: [
       { id: "plain-dosa",         name: "Plain Dosa",         price: 40,  image: U("1567620905732-2d1ec7ab7445") },
@@ -24,7 +24,7 @@ const menuData = [
     id: "special-nashta",
     category: "Special Nashta",
     categoryHindi: "स्पेशल नाश्ता",
-    image: U("1601050690597-df0568f70950"),
+    image: "/images/special-nashta/cover.jpg",
     icon: "🍵",
     items: [
       { id: "poha",                 name: "Poha",                 price: 15,   image: U("1606491956689-2ea866880c84") },
@@ -49,7 +49,7 @@ const menuData = [
     id: "coffee",
     category: "Coffee",
     categoryHindi: "कॉफी",
-    image: U("1495474472287-4d71bcdd2085"),
+    image: "/images/coffee/cover.jpg",
     icon: "☕",
     items: [
       { id: "hot-coffee",              name: "Hot Coffee",             price: 20, image: U("1495474472287-4d71bcdd2085") },
@@ -63,7 +63,7 @@ const menuData = [
     id: "shake",
     category: "Shake",
     categoryHindi: "शेक",
-    image: U("1572286258217-40297a1a4af7"),
+    image: "/images/shake/cover.jpg",
     icon: "🥤",
     items: [
       { id: "strawberry-shake",   name: "Strawberry Shake",   price: 80, image: U("1556679823-9067-42a1-b785-e59cbbc9c2b0") },
@@ -79,7 +79,7 @@ const menuData = [
     id: "sandwich",
     category: "Sandwich",
     categoryHindi: "सैंडविच",
-    image: U("1528736235302-52922df5c122"),
+    image: "/images/sandwich/cover.jpg",
     icon: "🥪",
     items: [
       { id: "masala-sandwich",           name: "Masala Sandwich",           price: 50,  image: U("1528736235302-52922df5c122") },
@@ -100,7 +100,7 @@ const menuData = [
     id: "pav-bhaji",
     category: "Pav Bhaji",
     categoryHindi: "पाव भाजी",
-    image: U("1606313564200-e75d5e30476c"),
+    image: "/images/pav-bhaji/cover.jpg",
     icon: "🍛",
     items: [
       { id: "pav-bhaji",        name: "Pav Bhaji",        price: 60,  image: U("1606313564200-e75d5e30476c") },
@@ -117,7 +117,7 @@ const menuData = [
     id: "pasta",
     category: "Pasta",
     categoryHindi: "पास्ता",
-    image: U("1645112411341-6c4fd023714a"),
+    image: "/images/pasta/cover.jpg",
     icon: "🍝",
     items: [
       { id: "white-pasta",  name: "White Pasta",  price: 100, image: U("1645112411341-6c4fd023714a") },
@@ -129,7 +129,7 @@ const menuData = [
     id: "pizza",
     category: "Pizza",
     categoryHindi: "पिज्जा",
-    image: U("1565299624946-b28f40a0ae38"),
+    image: "/images/pizza/cover.jpg",
     icon: "🍕",
     isPizza: true,
     items: [
@@ -160,7 +160,7 @@ const menuData = [
     id: "rice",
     category: "Rice",
     categoryHindi: "राईस",
-    image: U("1603133872878-684f208fb84b"),
+    image: "/images/rice/cover.jpg",
     icon: "🍚",
     items: [
       { id: "veg-fried-rice",       name: "Veg Fried Rice",        price: 70,  image: U("1603133872878-684f208fb84b") },
@@ -177,7 +177,7 @@ const menuData = [
     id: "burger",
     category: "Burger",
     categoryHindi: "बर्गर",
-    image: U("1568901346375-23c9450c58cd"),
+    image: "/images/burger/cover.jpg",
     icon: "🍔",
     items: [
       { id: "veg-burger",        name: "Veg Burger",        price: 50,  image: U("1568901346375-23c9450c58cd") },
@@ -193,7 +193,7 @@ const menuData = [
     id: "chilli-paneer",
     category: "Chilli Paneer",
     categoryHindi: "चिल्ली पनीर",
-    image: U("1631452180519-c014fe946bc7"),
+    image: "/images/chilli-paneer/cover.jpg",
     icon: "🌶️",
     items: [
       { id: "chilli-paneer-gravy", name: "Chilli Paneer Gravy", price: 140, image: U("1631452180519-c014fe946bc7") },
@@ -208,7 +208,7 @@ const menuData = [
     id: "dabeli",
     category: "Dabeli",
     categoryHindi: "दाबेली",
-    image: U("1601050690597-df0568f70950"),
+    image: "/images/dabeli/cover.jpg",
     icon: "🫓",
     items: [
       { id: "dabeli",        name: "Dabeli",        price: 20, image: U("1601050690597-df0568f70950") },
@@ -222,7 +222,7 @@ const menuData = [
     id: "snacks",
     category: "Snacks",
     categoryHindi: "स्नेक्स",
-    image: U("1518013431117-eb1465fa5752"),
+    image: "/images/snacks/snack.jpg",
     icon: "🍟",
     items: [
       { id: "finger-chips",    name: "Finger Chips",    price: 50, image: U("1518013431117-eb1465fa5752") },
@@ -235,7 +235,7 @@ const menuData = [
     id: "noodles",
     category: "Noodles",
     categoryHindi: "नूडल्स",
-    image: U("1569050467447-ce54b3bbc37d"),
+    image: "/images/noodles/noodles.webp",
     icon: "🍜",
     items: [
       { id: "veg-noodles",      name: "Veg Noodles",      price: 60,  image: U("1569050467447-ce54b3bbc37d") },
@@ -249,7 +249,7 @@ const menuData = [
     id: "manchurian",
     category: "Manchurian",
     categoryHindi: "मंचूरियन",
-    image: U("1569050467447-ce54b3bbc37d"),
+    image: "/images/manchurian/manchurian.jpg",
     icon: "🥘",
     items: [
       { id: "manchurian-gravy",       name: "Manchurian Gravy",       price: 70, image: U("1569050467447-ce54b3bbc37d") },
@@ -263,7 +263,7 @@ const menuData = [
     id: "momos",
     category: "Momos",
     categoryHindi: "मोमोज",
-    image: U("1588166524941-3bf61a9c41db"),
+    image: "/images/momos/momos.jpg",
     icon: "🥟",
     items: [
       { id: "veg-momos",    name: "Veg Momos",    price: 50, image: U("1588166524941-3bf61a9c41db") },
@@ -277,7 +277,7 @@ const menuData = [
     id: "maggi",
     category: "Maggi",
     categoryHindi: "मैगी",
-    image: U("1569050467447-ce54b3bbc37d"),
+    image: "/images/maggi/maggi.jpg",
     icon: "🍲",
     items: [
       { id: "maggi",          name: "Maggi",          price: 50, image: U("1569050467447-ce54b3bbc37d") },
@@ -291,7 +291,7 @@ const menuData = [
     id: "chaat-center",
     category: "Chaat Center",
     categoryHindi: "चाट सेन्टर",
-    image: U("1606491956689-2ea866880c84"),
+    image: "/images/chaat-center/chatt.avif",
     icon: "🌮",
     items: [
       { id: "pani-puri",              name: "Pani Puri",              price: 20,   image: U("1606491956689-2ea866880c84") },
