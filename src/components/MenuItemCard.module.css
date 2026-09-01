@@ -132,3 +132,21 @@
   align-self: center;
   margin-bottom: 2px;
 }
+
+/* Desktop typography & spacing */
+@media (min-width: 768px) {
+  .info {
+    padding: 0.85rem 0.95rem 0.95rem;
+    gap: 0.5rem;
+  }
+  .name {
+    font-size: 0.92rem;
+  }
+  .price {
+    font-size: 1rem;
+  }
+  .priceVal {
+    font-size: 0.92rem;
+  }
+}
+
