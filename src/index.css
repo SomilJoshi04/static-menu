@@ -1,0 +1,54 @@
+/* ==============================================
+   GLOBAL CSS — प्रहलाद भेल Restaurant Menu
+   ============================================== */
+:root {
+  --maroon: #5A0F18;
+  --dark-maroon: #2B070B;
+  --deep-maroon: #1a0407;
+  --gold: #D4AF37;
+  --warm-gold: #F2C94C;
+  --light-gold: #E8B84B;
+  --cream: #FFF7E6;
+  --off-white: rgba(255,247,230,0.88);
+  --muted: rgba(255,247,230,0.5);
+  --card-bg: #1e0609;
+  --card-border: rgba(212,175,55,0.18);
+  --font-deva: 'Noto Serif Devanagari','Noto Sans Devanagari',serif;
+  --font-main: 'Outfit','Inter',sans-serif;
+  --radius-card: 14px;
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.45);
+  --transition: 0.22s ease;
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--dark-maroon);
+  color: var(--cream);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+button { appearance: none; -webkit-appearance: none; border: none; background: none; cursor: pointer; font-family: inherit; }
+a { color: inherit; text-decoration: none; }
+
+#main-content { padding-bottom: 2rem; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--dark-maroon); }
+::-webkit-scrollbar-thumb { background: rgba(212,175,55,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(212,175,55,0.5); }
+
+/* Focus */
+*:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+::selection { background: rgba(212,175,55,0.3); color: var(--cream); }
+
+/* Body lock when modal open */
+body.modal-open { overflow: hidden; }

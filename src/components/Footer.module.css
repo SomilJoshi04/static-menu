@@ -1,0 +1,97 @@
+.footer {
+  background: linear-gradient(180deg, #2B070B 0%, #1a0407 100%);
+  border-top: 2px solid rgba(212,175,55,0.3);
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.decoTop {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  max-width: 280px;
+  margin: 0 auto 1.8rem;
+}
+
+.decoLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent);
+}
+
+.decoStar { color: rgba(212,175,55,0.5); font-size: 0.58rem; letter-spacing: 0.3rem; flex-shrink: 0; }
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.logoIcon { font-size: 1.8rem; opacity: 0.8; }
+
+.name {
+  font-family: 'Noto Serif Devanagari','Noto Sans Devanagari',serif;
+  font-size: clamp(0.95rem, 3.2vw, 1.25rem);
+  font-weight: 600;
+  color: #E8B84B;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.notice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.noticeIcon { font-size: 1.1rem; flex-shrink: 0; }
+
+.noticeText {
+  font-family: 'Noto Sans Devanagari','Noto Serif Devanagari',sans-serif;
+  font-size: clamp(0.8rem, 2.2vw, 0.95rem);
+  color: #F2C94C;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  max-width: 180px;
+  margin: 0 auto 1.2rem;
+}
+
+.divLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.22), transparent);
+}
+
+.divGem { color: rgba(212,175,55,0.3); font-size: 0.5rem; }
+
+.tagline {
+  font-family: 'Outfit','Inter',sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,247,230,0.45);
+  margin: 0 0 0.5rem;
+}
+
+.thankyou {
+  font-family: 'Outfit','Inter',sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,247,230,0.3);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .notice { flex-direction: column; text-align: center; gap: 0.3rem; }
+}

@@ -1,0 +1,227 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;      /* Bottom sheet on all screens by default */
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Sheet / Modal */
+.sheet {
+  position: relative;
+  background: linear-gradient(160deg, #2B070B 0%, #1e0609 100%);
+  border: 1px solid rgba(212,175,55,0.3);
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 -8px 40px rgba(0,0,0,0.7);
+  animation: slideUp 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  scrollbar-width: none;
+}
+
+.sheet::-webkit-scrollbar { display: none; }
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Desktop: centered modal */
+@media (min-width: 640px) {
+  .overlay { align-items: center; padding: 1rem; }
+
+  .sheet {
+    border-radius: 20px;
+    max-height: 85vh;
+    animation: zoomIn 0.22s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.92); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+}
+
+/* Close Button */
+.closeBtn {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  z-index: 10;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(43,7,11,0.85);
+  border: 1.5px solid rgba(212,175,55,0.4);
+  color: #F2C94C;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.closeBtn:hover {
+  background: rgba(212,175,55,0.15);
+  border-color: #D4AF37;
+}
+
+/* Image */
+.imgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #1a0407;
+  flex-shrink: 0;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imgFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2B070B, #1a0407);
+}
+
+.fallbackEmoji { font-size: 4rem; opacity: 0.45; }
+
+.imgGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(30,6,9,0.8) 100%);
+}
+
+/* Content */
+.content {
+  padding: 1.25rem 1.5rem 2rem;
+}
+
+/* Category Badge */
+.catBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'Outfit','Inter',sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(212,175,55,0.7);
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 100px;
+  padding: 0.25rem 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.8rem;
+}
+
+/* Item Name */
+.itemName {
+  font-family: 'Outfit','Inter',sans-serif;
+  font-size: clamp(1.25rem, 4vw, 1.65rem);
+  font-weight: 700;
+  color: #FFF7E6;
+  margin: 0 0 0.8rem;
+  line-height: 1.25;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1.25rem;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(212,175,55,0.3), transparent);
+}
+
+.dividerDot { color: rgba(212,175,55,0.45); font-size: 0.5rem; }
+
+/* Price */
+.priceSection { }
+
+.priceRow { display: flex; align-items: center; }
+
+.price {
+  font-family: 'Outfit','Inter',sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #F2C94C;
+  line-height: 1;
+}
+
+.askCounter {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(212,175,55,0.65);
+  font-style: italic;
+  background: rgba(212,175,55,0.08);
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  border: 1px solid rgba(212,175,55,0.2);
+}
+
+/* Pizza Prices */
+.pizzaPrices {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pizzaPrice {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pizzaSizeLabel {
+  font-family: 'Outfit','Inter',sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(212,175,55,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pizzaPriceVal {
+  font-family: 'Outfit','Inter',sans-serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #F2C94C;
+  line-height: 1;
+}
+
+.pizzaDivider {
+  width: 1px;
+  height: 40px;
+  background: rgba(212,175,55,0.2);
+  border-radius: 1px;
+}

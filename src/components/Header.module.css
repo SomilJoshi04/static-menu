@@ -1,0 +1,156 @@
+.header {
+  background: linear-gradient(180deg, #1a0407 0%, #2B070B 60%, #3d0a10 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 1.1rem 1rem 1rem;
+  position: relative;
+  z-index: 50;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+/* Branding */
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(90, 15, 24, 0.6));
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.logoIcon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.restaurantName {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: clamp(1.05rem, 3.8vw, 1.45rem);
+  font-weight: 700;
+  color: #F2C94C;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.tagline {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(0.68rem, 2vw, 0.78rem);
+  font-weight: 500;
+  color: rgba(255, 247, 230, 0.65);
+  margin: 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tagline span {
+  color: #D4AF37;
+  font-size: 0.6rem;
+  vertical-align: middle;
+}
+
+/* Search Bar */
+.searchWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  color: rgba(212, 175, 55, 0.7);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(212, 175, 55, 0.25);
+  border-radius: 50px;
+  padding: 0.72rem 2.6rem 0.72rem 2.7rem;
+  color: #FFF7E6;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.88rem;
+  outline: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.searchInput::placeholder {
+  color: rgba(255, 247, 230, 0.45);
+  font-size: 0.84rem;
+}
+
+.searchInput:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #D4AF37;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.25);
+}
+
+.clearBtn {
+  position: absolute;
+  right: 0.85rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.2);
+  color: #F2C94C;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.clearBtn:hover {
+  background: rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.9rem 0.85rem 0.85rem;
+  }
+  .brandRow {
+    gap: 0.6rem;
+  }
+  .logoBadge {
+    width: 38px;
+    height: 38px;
+  }
+  .logoIcon {
+    font-size: 1.3rem;
+  }
+}

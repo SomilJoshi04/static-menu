@@ -1,0 +1,181 @@
+/* Sticky Circular Category Navigation */
+.stickyCategoryNav {
+  position: sticky;
+  top: 0;
+  z-index: 85;
+  background: rgba(26, 4, 7, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+  padding: 0.75rem 1rem 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header Row: "Categories" */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.sectionTitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFF7E6;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  letter-spacing: -0.01em;
+}
+
+.titleHindi {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(212, 175, 55, 0.6);
+}
+
+/* Circular Grid / Horizontal Scroll */
+.circleGrid {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.85rem;
+  padding: 0.15rem 0.2rem 0.4rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.circleGrid::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Circular Category Card */
+.circleCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 64px;
+  max-width: 74px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: transform 0.22s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.circleCard:hover {
+  transform: translateY(-2px);
+}
+
+/* Avatar circle */
+.circleAvatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.3), rgba(90, 15, 24, 0.7));
+  border: 1.5px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.circleCard:hover .circleAvatar {
+  border-color: rgba(212, 175, 55, 0.7);
+  transform: scale(1.04);
+}
+
+/* Active circular category */
+.activeCircleCard .circleAvatar {
+  border-color: #F2C94C;
+  border-width: 2px;
+  background: linear-gradient(135deg, #D4AF37, #F2C94C);
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.55);
+  transform: scale(1.08);
+}
+
+.activeGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  box-shadow: inset 0 0 8px rgba(212, 175, 55, 0.6);
+  pointer-events: none;
+}
+
+.circleImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.circleFallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #2B070B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* Category Label */
+.circleLabel {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255, 247, 230, 0.8);
+  text-align: center;
+  line-height: 1.15;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.activeCircleCard .circleLabel {
+  color: #F2C94C;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .stickyCategoryNav {
+    padding: 0.65rem 0.75rem 0.35rem;
+  }
+  .sectionTitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.1rem;
+  }
+  .circleAvatar {
+    width: 52px;
+    height: 52px;
+  }
+  .circleCard {
+    min-width: 58px;
+    max-width: 66px;
+    gap: 0.25rem;
+  }
+  .circleLabel {
+    font-size: 0.68rem;
+  }
+}
