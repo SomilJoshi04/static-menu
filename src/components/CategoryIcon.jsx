@@ -27,6 +27,8 @@ export const getCategoryIcon = (categoryId, className = "") => {
       return <FaMugSaucer className={className} />;
     case "shake":
       return <FaGlassWater className={className} />;
+    case "cold-drinks":
+      return <FaGlassWater className={className} />;
     case "sandwich":
       return <FaBreadSlice className={className} />;
     case "pav-bhaji":
